@@ -1,4 +1,12 @@
 component Main {
+  fun componentDidMount {
+    try {
+      LocalStorageLoader.load()
+
+      void
+    }
+  }
+
   fun render : Html {
     <div::container>
       <Character/>

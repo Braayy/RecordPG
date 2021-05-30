@@ -1,5 +1,5 @@
 component Character {
-  connect Store.Global exposing { character, setCharacterName, setCharacterAvatarUrl, setCharacterHealth, setCharacterSanity }
+  connect Store.Character exposing { character, setCharacterName, setCharacterAvatarUrl, setCharacterHealth, setCharacterSanity }
   
   fun handleName {
     Modal.Input.show(

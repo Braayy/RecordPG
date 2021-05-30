@@ -1,8 +1,8 @@
 component Annotations {
-  connect Store.Global exposing { annotations, setAnnotations }
+  connect Store.Annotations exposing { annotations, updateAnnotations }
 
   fun handleChange(event : Html.Event) {
-    setAnnotations(Dom.getValue(event.target))
+    updateAnnotations(Dom.getValue(event.target))
   }
 
   fun render : Html {

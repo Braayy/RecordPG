@@ -1,5 +1,5 @@
 component DiceComboList {
-  connect Store.Global exposing { combos, addCombo, removeCombo }
+  connect Store.Combos exposing { combos, addCombo, removeCombo }
 
   fun handleAdd {
     addCombo()

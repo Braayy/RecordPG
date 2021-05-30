@@ -1,5 +1,5 @@
 component DiceCombo {
-  connect Store.Global exposing { combos, updateCombo, removeCombo }
+  connect Store.Combos exposing { combos, updateCombo, removeCombo }
 
   property combo : Combo
 
