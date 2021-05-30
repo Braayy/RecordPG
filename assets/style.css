@@ -1,0 +1,31 @@
+:root {
+  --primary: #272121;
+  --secondary: #363333;
+  --text: #F6E9E9;
+
+  --health: #C31D1D;
+  --sanity: #1B8DB1;
+
+  --error: #fd4c4c;
+
+  font-size: 20px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  font-family: 'Roboto', sans-serif;
+}
+
+html, body {
+  width: 100%;
+  min-height: 100vh;
+  background: var(--primary);
+  color: var(--text);
+}
+
+input:focus, button:focus {
+  outline: none;
+}

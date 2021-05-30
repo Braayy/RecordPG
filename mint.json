@@ -1,0 +1,27 @@
+{
+  "name": "recordpg",
+  "application": {
+    "head": "assets/head.html",
+    "title": "RecordPG",
+    "icon": "assets/die.svg",
+    "orientation": "portrait",
+    "name": "recordpg",
+    "theme-color": "dark",
+    "display": "standalone"
+  },
+  "external": {
+    "stylesheets": [
+      "assets/style.css"
+    ]
+  },
+  "source-directories": [
+    "source"
+  ],
+  "test-directories": [],
+  "dependencies": {
+    "mint-feather": {
+      "repository": "https://github.com/Vechro/mint-feather",
+      "constraint": "master:0.2.0"
+    }
+  }
+}

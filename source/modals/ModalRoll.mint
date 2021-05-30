@@ -1,0 +1,99 @@
+global component Modal.Roll {
+  state open = false
+  state number = 0
+  state numberOpacity = 0
+
+  fun show(number : Number) {
+    sequence {
+      next {
+        open = true,
+        number = number
+      }
+
+      Timer.timeout(400, void)
+
+      next {
+        numberOpacity = 1
+      }
+    }
+  }
+
+  fun handleClose {
+    next {
+      open = false,
+      number = 0,
+      numberOpacity = 0
+    }
+  }
+
+  fun render : Html {
+    <div::rollModal>
+      <div>
+        <p><{ Number.toString(number) }></p>
+      </div>
+      <button onClick={handleClose}>"Close"</button>
+    </div>
+  }
+
+  style rollModal {
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    width: 40rem;
+    height: 20rem;
+    z-index: 1;
+
+    padding: .5rem;
+
+    background: var(--secondary);
+
+    display: flex;
+    flex-direction: column;
+
+    if (open) {
+      visibility: visible;
+    } else {
+      visibility: hidden;
+    }
+
+    div {
+      flex-grow: 1;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      p {
+        font-size: 5rem;
+
+        opacity: #{numberOpacity};
+        transition: opacity .5s;
+      }
+    }
+
+    button {
+      width: 6rem;
+      height: 2rem;
+
+      margin: 0 auto;
+
+      border: 1px solid var(--text);
+      background: none;
+      color: var(--text);
+
+      font-size: 1.2rem;
+
+      cursor: pointer;
+
+      transition: background .15s, color .15s;
+
+      &:hover {
+        background: var(--text);
+        color: var(--primary);
+      }
+    }
+  }
+}
